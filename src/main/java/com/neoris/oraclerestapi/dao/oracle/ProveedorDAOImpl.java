@@ -3,6 +3,7 @@ package com.neoris.oraclerestapi.dao.oracle;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceException;
 import javax.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 import com.neoris.oraclerestapi.dao.IProveedorDAO;
@@ -42,6 +43,11 @@ public class ProveedorDAOImpl implements IProveedorDAO {
 		prov.setContacto(proveedor.getContacto());
 		prov.setCeluprov(proveedor.getCeluprov());
 		prov.setFijoprov(proveedor.getFijoprov());
+		try {
+			
+		}catch(PersistenceException e) {
+			
+		}
 		entityManager.flush();
 		
 	}
