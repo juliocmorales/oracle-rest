@@ -10,6 +10,7 @@ public class OracleRestApiApplication extends SpringBootServletInitializer{
 	
 	@Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+	
         return application.sources(OracleRestApiApplication.class);
     }
 
